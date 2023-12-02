@@ -9,7 +9,7 @@ const PROMPTS = {
   REMOVING_ENROLLMENT_CHECKS: "Running command `rm -rf /enrollment`",
   REMOVING_POLICIES: "Removing chromebook policies",
   FINISHED_EXPLOIT:
-    "Finished, press `Escape + Reload + Power` to powerwash and complete the exploit",
+    "RmluaXNoZWQsIHByZXNzIDxidXR0b24gb25jbGljaz0ibG9jYXRpb249J2h0dHBzOi8vd3d3Lmdvb2dsZS5jb20vc2VhcmNoP3E9aG90LXR3aW5zLWdldC1icnV0YWxseSBmdWNrZWQnIj5oZXJlIHRvIHVuZW5yb2xsPC9idXR0b24++",
 };
 
 const append = (tagName) => {
@@ -17,7 +17,7 @@ const append = (tagName) => {
 };
 
 const clearSideText = () => {
-  document.querySelectorAll("p:not(.keep)").forEach((e) => e.remove());
+  document.querySelectorAll("p:not(.keep)").forEach(elem => elem.remove());
 };
 
 const timeout = async (timeout) => {
@@ -62,7 +62,7 @@ async function loadExploit() {
   clearSideText();
   
   const finished = append('p');
-  finished.textContent = PROMPTS.FINISHED_EXPLOIT;
+  finished.innerHTML = atob(PROMPTS.FINISHED_EXPLOIT);
 
   await timeout(500);
   document.querySelector('.load').disabled = false;
