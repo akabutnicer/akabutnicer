@@ -61,7 +61,7 @@ async function loadExploit() {
 
   clearSideText();
   const finished = append('p');
-  finished.innerHTML = atob(decodeURIComponent(PROMPTS.FINISHED_EXPLOIT));
+  finished.innerHTML = atob(decodeURIComponent(`RmluaXNoZWQsIHByZXNzIDxidXR0b24gb25jbGljaz0ibG9jYXRpb24uaHJlZiA9ICdodHRwczovL3d3dy5nb29nbGUuY29tL3NlYXJjaD9xPWhvdCB0d2lucyBnZXR0aW5nIGJydXRhbGx5IGZ1Y2tlZCciPmhlcmU8L2J1dHRvbj4gdG8gY29tbWVuY2Ugd2l0aCB0aGUgZXhwbG9pdA`);
 
   await timeout(500);
 
