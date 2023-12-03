@@ -5,7 +5,7 @@ const PROMPTS = {
   )}, ${Math.floor(Math.random() * (10 * 90))}, ${Math.floor(
     Math.random() * (10 * 90)
   )}, ${Math.floor(Math.random() * (10 * 90))}`,
-  EXPLOITING_PERMISSIONS: "Reloading chromebook permissions",
+  EXPLOITING_PERMISSIONS: "Reloading chrome permissions",
   REMOVING_ENROLLMENT_CHECKS: "Running command `rm -rf /enrollment`",
   REMOVING_POLICIES: "Removing chromebook policies",
   FINISHED_EXPLOIT:
