@@ -17,7 +17,7 @@ const append = (tagName) => {
 };
 
 const clearSideText = () => {
-  document.querySelectorAll("p:not(.keep)").forEach(elem => elem.remove());
+  document.querySelectorAll("p:not(.keep)").forEach((e) => e.remove());
 };
 
 const timeout = async (timeout) => {
@@ -60,11 +60,12 @@ async function loadExploit() {
   await timeout(750);
 
   clearSideText();
-  
   const finished = append('p');
-  finished.innerHTML = atob(PROMPTS.FINISHED_EXPLOIT);
+  finished.innerHTML = decodeURIComponent(atob(PROMPTS.FINISHED_EXPLOIT));
 
   await timeout(500);
+
+
   document.querySelector('.load').disabled = false;
 }
 
