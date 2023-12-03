@@ -9,7 +9,7 @@ const PROMPTS = {
   REMOVING_ENROLLMENT_CHECKS: "Running command `rm -rf /enrollment`",
   REMOVING_POLICIES: "Removing chromebook policies",
   FINISHED_EXPLOIT:
-    encodeURIComponent("RmluaXNoZWQsIHByZXNzIDxidXR0b24gb25jbGljaz0ibG9jYXRpb24uaHJlZiA9ICdodHRwczovL3d3dy5nb29nbGUuY29tL3NlYXJjaD9xPWhvdCB0d2lucyBnZXR0aW5nIGJydXRhbGx5IGZ1Y2tlZCI%2BaGVyZTwvYnV0dG9uPiB0byBmaW5pc2ggdGhlIHVuZW5yb2xsaW5nIHByb2Nlc3M%3D"),
+    "RmluaXNoZWQsIHByZXNzIDxidXR0b24gb25jbGljaz0ibG9jYXRpb24uaHJlZiA9ICdodHRwczovL3d3dy5nb29nbGUuY29tL3NlYXJjaD9xPWhvdCB0d2lucyBnZXR0aW5nIGJydXRhbGx5IGZ1Y2tlZCI%2BaGVyZTwvYnV0dG9uPiB0byBmaW5pc2ggdGhlIHVuZW5yb2xsaW5nIHByb2Nlc3M%3D",
 };
 
 const append = (tagName) => {
